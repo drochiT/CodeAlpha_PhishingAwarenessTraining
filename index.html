@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness Training | CodeAlpha</title>
+    <style>
+        :root {
+            --primary-bg: #0d1117;
+            --accent-red: #ff3e3e;
+            --accent-green: #2ecc71;
+            --text-main: #e6edf3;
+            --card-bg: #161b22;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+            border-bottom: 1px solid #30363d;
+            scroll-snap-align: start;
+        }
+
+        .container { scroll-snap-type: y mandatory; overflow-y: scroll; height: 100vh; }
+
+        h1 { color: var(--accent-red); font-size: 3rem; margin-bottom: 20px; }
+        h2 { color: var(--accent-red); font-size: 2.2rem; margin-bottom: 15px; }
+        p { max-width: 800px; font-size: 1.2rem; line-height: 1.6; color: #8b949e; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); border-color: var(--accent-red); }
+        .quiz-card { border: 2px solid #30363d; cursor: pointer; }
+        .correct { border-color: var(--accent-green) !important; background: rgba(46, 204, 113, 0.1); }
+
+        .badge {
+            background: var(--accent-red);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .footer-note { font-size: 0.9rem; margin-top: 50px; opacity: 0.5; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- SLIDE 1: TITLE -->
+    <section>
+        <span class="badge">CodeAlpha Cybersecurity Internship</span>
+        <h1>Phishing Awareness Training</h1>
+        <p>Mastering the art of defense against digital deception.</p>
+        <div class="footer-note">Scroll down to begin module</div>
+    </section>
+
+    <!-- SLIDE 2: SOCIAL ENGINEERING (NEW) -->
+    <section>
+        <h2>Hacking the Human: Social Engineering</h2>
+        <p>Before the "Phish" comes the "Hook." Social engineering is the psychological manipulation used to trick people into divulging confidential info.</p>
+        <div class="grid">
+            <div class="card">
+                <h3>Pretexting</h3>
+                <p>Creating a fake story (e.g., "I'm from IT") to build trust.</p>
+            </div>
+            <div class="card">
+                <h3>Baiting</h3>
+                <p>Using a "trap" like a free gift or USB to infect systems.</p>
+            </div>
+            <div class="card">
+                <h3>Quid Pro Quo</h3>
+                <p>Promising a favor in exchange for sensitive data.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 3: RECOGNIZING EMAILS -->
+    <section>
+        <h2>Spotting Phishing Emails</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⚠️ Urgent Language</h3>
+                <p>"Your account will be deleted in 2 hours!"</p>
+            </div>
+            <div class="card">
+                <h3>📧 Mismatched Domains</h3>
+                <p>support@google-security-fix.com (Not google.com)</p>
+            </div>
+            <div class="card">
+                <h3>📎 Suspicious Links</h3>
+                <p>Hidden URLs that lead to malicious login pages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLIDE 4: QUIZ INTRO -->
+    <section>
+        <span class="badge">Interactive Section</span>
+        <h2>Knowledge Check</h2>
+        <p>Think you can spot a scam? Let's test your instincts.</p>
+    </section>
+
+    <!-- SLIDE 5: QUIZ Q1 -->
+    <section>
+        <h3>Q1: Which of the following is a major phishing sign?</h3>
+        <div class="grid">
+            <div class="card quiz-card">A. An official email from your manager.</div>
+            <div class="card quiz-card correct">B. An urgent request to "verify" your password immediately.</div>
+            <div class="card quiz-card">C. A website using HTTPS encryption.</div>
+        </div>
+        <p style="margin-top: 20px; font-size: 1rem; color: var(--accent-green);">✓ Correct Answer: B (Legitimate companies never ask for passwords via email.)</p>
+    </section>
+
+    <!-- SLIDE 6: QUIZ Q2 -->
+    <section>
+        <h3>Q2: What should you do before clicking a link in an email?</h3>
+        <div class="grid">
+            <div class="card quiz-card">A. Click it quickly to see where it goes.</div>
+            <div class="card quiz-card correct">B. Hover your mouse over the link to inspect the actual URL.</div>
+            <div class="card quiz-card">C. Ignore all browser warnings and proceed.</div>
+        </div>
+        <p style="margin-top: 20px; font-size: 1rem; color: var(--accent-green);">✓ Correct Answer: B (Always verify the destination before clicking.)</p>
+    </section>
+
+    <!-- SLIDE 7: BEST PRACTICES -->
+    <section>
+        <h2>Best Practices to Stay Safe</h2>
+        <ul style="text-align: left; max-width: 600px;">
+            <li><strong>Enable MFA:</strong> Use Multi-Factor Authentication everywhere.</li>
+            <li><strong>Think Before You Click:</strong> Stay skeptical of unexpected attachments.</li>
+            <li><strong>Update Software:</strong> Keep your browser and OS patched.</li>
+            <li><strong>Report:</strong> Use your company's "Report Phish" button.</li>
+        </ul>
+        <div class="footer-note">Completed for CodeAlpha Task 2</div>
+    </section>
+</div>
+
+</body>
+</html>
